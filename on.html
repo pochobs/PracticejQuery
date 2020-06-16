@@ -1,0 +1,31 @@
+
+<!--https://www.youtube.com/watch?v=H-24BT-8b6Q-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="../../LIBRARY/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#btn_1").on("click", function(){
+                alert("Evento Click Funcionando");
+            });
+            $("#btn_2").on("click", function(){
+            $("#btn_1").off("click");
+            });
+            $("#btn_3").one("click", function() {
+                alert("Evento solo una vez")
+            })
+        });
+            </script>
+    <title>Events on() off()</title>
+</head>
+<body>
+    <input type="button" id="btn_1" value="Haz click sobre mi">
+    <input type="button" id="btn_2" value="Elimina evento">
+    <input type="button" id="btn_3" value="Evento solo una vez">
+    
+</body>
+</html>
